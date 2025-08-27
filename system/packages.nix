@@ -2,7 +2,7 @@
 
 {
 
-  nixpkgs.overlays = [ inputs.neovim-nightly-overlay ];
+  nixpkgs.overlays = [ inputs.neovim-nightly-overlay.overlays.default ];
 
   nixpkgs.config.allowUnfree = true;
   fonts.packages = with pkgs; [
@@ -20,8 +20,11 @@
   environment.systemPackages = with pkgs; [
     efibootmgr
     grub2
+    nixos-bgrt-plymouth
 
     gcc
+    gnumake
+    ncurses
     clang-tools
     cargo
     nodejs_24
@@ -91,7 +94,7 @@
 
     neovim = {
       enable = true;
-      package = pkgs.neovim-nightly;
+      package = pkgs.neovim-unwrapped;
       defaultEditor = true;
       viAlias = true;
       vimAlias = true;

@@ -19,7 +19,6 @@
     nixpkgs,
     home-manager,
     nixvim,
-    neovim-nightly-overlay,
     ...
     }@inputs:
     {

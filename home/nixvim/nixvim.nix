@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -7,6 +7,7 @@
 
   programs.nixvim = {
     enable = true;
+    package = pkgs.neovim-unwrapped;
     defaultEditor = true;
     vimdiffAlias = true;
     vimAlias = true;
