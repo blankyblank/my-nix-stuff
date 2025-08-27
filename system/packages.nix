@@ -1,6 +1,9 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
+
+  nixpkgs.overlays = [ inputs.neovim-nightly-overlay ];
+
   nixpkgs.config.allowUnfree = true;
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
@@ -68,7 +71,6 @@
     python313Packages.adblock
     mullvad-browser
     tridactyl-native
-    neovim
   ];
 
   programs = {
@@ -89,6 +91,7 @@
 
     neovim = {
       enable = true;
+      package = pkgs.neovim-nightly;
       defaultEditor = true;
       viAlias = true;
       vimAlias = true;
