@@ -16,12 +16,15 @@
     ./home/services.nix
   ];
 
-  programs.git = {
-    enable = true;
-    extraConfig = {
-      user = {
-        email = "mymozzarella@hotmail.com";
-        name = "blank blank";
+  programs = {
+    gh.gitCredentialHelper.enable = true;
+    git = {
+      enable = true;
+      extraConfig = {
+        user = {
+          email = "mymozzarella@hotmail.com";
+          name = "blank blank";
+        };
       };
     };
   };

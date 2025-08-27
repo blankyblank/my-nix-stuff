@@ -28,6 +28,7 @@
     plocate
     pass-wayland
     #    pass-git-helper
+    git-credential-manager
     pass-secret-service
     ripgrep
     fd
