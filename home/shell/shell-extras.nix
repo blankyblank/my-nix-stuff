@@ -9,10 +9,8 @@
     password-store = {
       enable = true;
       package = pkgs.pass-wayland;
-      settings = {
-        PASSWORD_STORE_DIR = "/home/blank/.local/share/password-store";
-      };
     };
+    gh.gitCredentialHelper.enable = true;
   };
 }
 

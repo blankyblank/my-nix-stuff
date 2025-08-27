@@ -2,7 +2,7 @@
   programs.nixvim.plugins = {
 
     nvim-autopairs.enable = true;
-    nix.enable = true;
+    #nix.enable = true;
     nvim-surround.enable = true;
 
     mini = {

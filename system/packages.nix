@@ -27,7 +27,7 @@
     dash
     plocate
     pass-wayland
-    pass-git-helper
+    #    pass-git-helper
     pass-secret-service
     ripgrep
     fd
