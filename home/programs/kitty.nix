@@ -6,7 +6,7 @@
       size = 16;
     };
     themeFile = "OneDark-Pro";
-    enableGitIntegration = true;
+    #enableGitIntegration = true;
     shellIntegration = {
       enableBashIntegration = true;
       mode = "no-cursor";
