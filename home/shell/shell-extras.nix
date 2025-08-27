@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs = {
     fzf = {
@@ -7,8 +8,9 @@
     bashmount.enable = true;
     password-store = {
       enable = true;
+      package = pkgs.pass-wayland;
       settings = {
-        PASSWORD_STORE_DIR = "$XDG_DATA_HOME/password-store";
+        PASSWORD_STORE_DIR = "/home/blank/.local/share/password-store";
       };
     };
   };

@@ -26,8 +26,9 @@
     bash
     dash
     plocate
-    #pass-wayland
+    pass-wayland
     pass-git-helper
+    pass-secret-service
     ripgrep
     fd
     fzf
