@@ -33,7 +33,6 @@
     dash
     plocate
     pass-wayland
-    #    pass-git-helper
     git-credential-manager
     pass-secret-service
     ripgrep
@@ -42,6 +41,7 @@
     bat
     btop
     yazi
+    lua-language-server
 
     gettext
     texinfo

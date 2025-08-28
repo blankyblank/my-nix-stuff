@@ -10,26 +10,6 @@
     };
   };
 
-  systemd.user.timers.mullvad-reconnect = {
-    wantedBy = [ "timers.target" ];
-    timerConfig = {
-      OnBootSec = "25m";
-      OnUnitActiveSec = "25m";
-      Unit = "mullvad-reconnect.service";
-    };
-  };
-  systemd.user.services.mullvad-reconnect = {
-    wantedBy = [ "default.target"];
-    description = "change mullvad server";
-    serviceConfig = {
-        Type = "oneshot";
-        ExecStart = "${pkgs.mullvad}/bin/mullvad reconnect";
-    };
-  };
-
-  systemd.user.timers.mullvad-reconnect.enable = true;
-  systemd.services.mullvad-connect.enable = true;
-
   services = {
     udev.extraRules = ''
     ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="amdgpu_bl1", MODE="0666", RUN+="${pkgs.coreutils}/bin/chmod a+w /sys/class/backlight/%k/brightness"

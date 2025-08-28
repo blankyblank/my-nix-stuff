@@ -5,7 +5,6 @@
     ./shell
     ./programs
     ./hypr
-    ./nixvim
   ];
 
   home.packages = with pkgs; [

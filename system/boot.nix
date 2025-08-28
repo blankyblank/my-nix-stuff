@@ -5,6 +5,8 @@
     kernelPackages = pkgs.linuxPackages_latest;
     plymouth = {
       enable = true;
+      ##theme = "nixos-bgrt";
+      #themePackages = with pkgs; ["pkgs.nixos-bgrt-plymouth"];
     };
     loader = {
       grub = {
